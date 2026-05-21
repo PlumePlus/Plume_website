@@ -1,0 +1,155 @@
+/* Shared legal page styles — Plume 3D (cozy version) */
+@font-face {
+  font-family: 'PlumeFont';
+  src: url('fonts/PlumeFont-Regular.woff2') format('woff2'),
+       url('fonts/PlumeFont-Regular.otf') format('opentype');
+  font-display: swap;
+}
+
+:root {
+  --cream:       #FBF5EB;
+  --cream-deep:  #F4E8D4;
+  --paper:       #FEFAF2;
+  --peach-soft:  #F5D4B3;
+  --peach:       #EFB890;
+  --rose:        #E89B89;
+  --rose-deep:   #C97A6A;
+  --sage:        #B8C9A9;
+  --ink-warm:    #3A2E26;
+  --ink-soft:    #5A4B3E;
+  --ink-muted:   #8B7565;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Nunito', system-ui, sans-serif;
+  background: var(--cream);
+  color: var(--ink-warm);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--rose-deep); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: rgba(251, 245, 235, 0.92);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  border-bottom: 1px solid rgba(120, 80, 50, 0.06);
+}
+nav .logo { display: flex; align-items: center; gap: 12px; }
+nav .logo-icon {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: inline-block;
+}
+nav .logo-icon img { width: 100%; height: 100%; object-fit: cover; }
+nav .logo-text {
+  font-family: 'PlumeFont', 'Nunito', sans-serif;
+  font-size: 22px;
+  color: var(--ink-warm);
+}
+nav .nav-back {
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.legal-hero {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 130px 32px 40px;
+  text-align: left;
+}
+.legal-hero .eyebrow {
+  display: inline-block;
+  background: var(--paper);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--rose-deep);
+  margin-bottom: 20px;
+}
+.legal-hero h1 {
+  font-family: 'PlumeFont', 'Nunito', sans-serif;
+  font-size: 56px;
+  line-height: 1.05;
+  margin-bottom: 18px;
+  color: var(--ink-warm);
+}
+.legal-hero .updated {
+  font-size: 14px;
+  color: var(--ink-muted);
+}
+
+.legal-body {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 30px 32px 100px;
+  font-size: 16px;
+  color: var(--ink-soft);
+}
+.legal-body p { margin-bottom: 18px; }
+.legal-body h2 {
+  font-family: 'PlumeFont', 'Nunito', sans-serif;
+  font-size: 30px;
+  line-height: 1.15;
+  margin: 50px 0 18px;
+  color: var(--ink-warm);
+}
+.legal-body h2:first-child { margin-top: 0; }
+.legal-body h3 {
+  font-weight: 600;
+  font-size: 18px;
+  margin: 28px 0 12px;
+  color: var(--ink-warm);
+}
+.legal-body ul { padding-left: 22px; margin-bottom: 18px; }
+.legal-body li { margin-bottom: 8px; }
+.legal-body strong { color: var(--ink-warm); font-weight: 700; }
+
+.legal-footer {
+  background: var(--paper);
+  padding: 50px 32px;
+  text-align: center;
+  border-top: 1px solid rgba(120, 80, 50, 0.07);
+  font-size: 14px;
+  color: var(--ink-muted);
+}
+.legal-footer a { color: var(--rose-deep); text-decoration: none; margin: 0 12px; font-weight: 500; }
+.legal-footer a:hover { text-decoration: underline; }
+.legal-footer .brand {
+  font-family: 'PlumeFont', 'Nunito', sans-serif;
+  font-size: 18px;
+  color: var(--ink-warm);
+  margin-bottom: 10px;
+}
+.legal-footer .contact-email {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+.legal-footer .contact-email a {
+  margin: 0;
+  color: var(--rose-deep);
+}
+
+@media (max-width: 700px) {
+  nav { padding: 12px 20px; }
+  .legal-hero, .legal-body, .legal-footer { padding-left: 20px; padding-right: 20px; }
+  .legal-hero { padding-top: 110px; }
+  .legal-hero h1 { font-size: 42px; }
+  .legal-body h2 { font-size: 26px; }
+}
